@@ -7,8 +7,8 @@
 
 import UIKit
 
-class RandomViewController: UIViewController, ParticipantsInitialDelegate {
-    
+class RandomViewController: UIViewController {
+
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var participantsLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -22,26 +22,10 @@ class RandomViewController: UIViewController, ParticipantsInitialDelegate {
         return self.theParticipant!
     }
     
-    
-    func getParticipantService() {
-        
-        if let participant = self.theParticipant {
-            SuggestionService().getSuggestionRandomForParticipants(participant) { suggestion in
-                let suggestion = suggestion
-                self.activityLabel.text = suggestion.activity
-                self.participantsLabel.text = "\(participant)"
-                self.priceLabel.text = self.getPriceRange(for: suggestion.price)
-                self.typeLabel.text = suggestion.type
-            }
-        }
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tryAnotherButton.layer.cornerRadius = tryAnotherButton.bounds.height/8
-//        getParticipantService()
         SuggestionService().getSuggestionRandom {suggestion in
             let suggestion = suggestion
             self.activityLabel.text = suggestion.activity

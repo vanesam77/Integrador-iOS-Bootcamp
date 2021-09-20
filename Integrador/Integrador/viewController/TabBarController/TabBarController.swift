@@ -8,12 +8,12 @@
 import UIKit
 
 class TabBarController: UITabBarController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         UITabBar.appearance().barTintColor = .blue
         tabBar.tintColor = .white
         setupVCs()
-        
     }
     
     func setupVCs() {

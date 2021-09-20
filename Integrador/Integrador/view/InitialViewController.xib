@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitialViewController" customModule="Integrador" customModuleProvider="target">
             <connections>
+                <outlet property="aceptTermsSwitch" destination="Cgw-vv-83d" id="0UW-Vl-lT2"/>
                 <outlet property="numberOfParticipantsTextField" destination="mMO-aG-H5d" id="807-GP-Rgb"/>
                 <outlet property="startButton" destination="BiX-JZ-bWi" id="KcF-7N-zzY"/>
                 <outlet property="termsAndConditionsButton" destination="0Tu-02-d0i" id="ZTX-fi-imd"/>
@@ -50,7 +52,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Tu-02-d0i">
-                    <rect key="frame" x="20" y="466.5" width="374" height="36"/>
+                    <rect key="frame" x="92" y="466.5" width="230" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="230" id="5kN-Y5-4eS"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                     <state key="normal" title="Terms and conditions">
                         <color key="titleColor" systemColor="linkColor"/>
@@ -65,12 +70,22 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Cgw-vv-83d">
+                    <rect key="frame" x="46" y="469" width="49" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="47" id="30s-9S-jtR"/>
+                        <constraint firstAttribute="height" constant="31" id="Ief-d5-awM"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="systemBlueColor"/>
+                    <color key="onTintColor" name="AccentColor"/>
+                </switch>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemTealColor"/>
             <constraints>
                 <constraint firstItem="BiX-JZ-bWi" firstAttribute="trailing" secondItem="mMO-aG-H5d" secondAttribute="trailing" id="2eq-94-dPq"/>
                 <constraint firstItem="05Y-g8-ZRh" firstAttribute="leading" secondItem="mMO-aG-H5d" secondAttribute="leading" id="42I-Tf-TRr"/>
+                <constraint firstItem="Cgw-vv-83d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="46" id="5HT-RR-v82"/>
                 <constraint firstItem="BiX-JZ-bWi" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="6os-Zf-7Rd"/>
                 <constraint firstItem="gBn-dH-zlb" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="DOv-GC-PMn"/>
                 <constraint firstItem="mMO-aG-H5d" firstAttribute="top" secondItem="05Y-g8-ZRh" secondAttribute="bottom" constant="50" id="GLH-gX-1Bh"/>
@@ -80,21 +95,28 @@
                 <constraint firstItem="mMO-aG-H5d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="TDn-KR-EAn"/>
                 <constraint firstItem="0Tu-02-d0i" firstAttribute="top" secondItem="BiX-JZ-bWi" secondAttribute="bottom" constant="20" id="Vud-Ng-oiB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mMO-aG-H5d" secondAttribute="trailing" constant="20" id="aMh-s6-QES"/>
-                <constraint firstItem="0Tu-02-d0i" firstAttribute="leading" secondItem="BiX-JZ-bWi" secondAttribute="leading" id="hEu-sn-YcZ"/>
-                <constraint firstItem="0Tu-02-d0i" firstAttribute="trailing" secondItem="BiX-JZ-bWi" secondAttribute="trailing" id="mX9-xa-iSo"/>
+                <constraint firstItem="Cgw-vv-83d" firstAttribute="centerY" secondItem="0Tu-02-d0i" secondAttribute="centerY" id="iON-W0-jsU"/>
                 <constraint firstItem="05Y-g8-ZRh" firstAttribute="top" secondItem="gBn-dH-zlb" secondAttribute="bottom" constant="50" id="qtD-02-Dje"/>
+                <constraint firstItem="Cgw-vv-83d" firstAttribute="top" secondItem="BiX-JZ-bWi" secondAttribute="bottom" constant="22.5" id="qvO-xp-IMV"/>
                 <constraint firstItem="BiX-JZ-bWi" firstAttribute="top" secondItem="mMO-aG-H5d" secondAttribute="bottom" constant="50" id="sLb-0W-0TM"/>
+                <constraint firstItem="0Tu-02-d0i" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="vPH-nQ-mYb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mMO-aG-H5d" secondAttribute="trailing" constant="20" id="ykF-Hz-QnK"/>
             </constraints>
             <point key="canvasLocation" x="-23.188405797101453" y="87.723214285714278"/>
         </view>
     </objects>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

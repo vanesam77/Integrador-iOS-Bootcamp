@@ -12,8 +12,6 @@ class ActivitiesViewController: UIViewController {
     let activities:[String] = ["education", "recreational", "social", "diy", "charity", "cooking", "relaxation", "music", "busywork"]
     var activity:String = ""
     
-
-
     @IBOutlet weak var activitiesTableView: UITableView!
     
     override func viewDidLoad() {

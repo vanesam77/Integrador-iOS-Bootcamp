@@ -6,22 +6,18 @@
 //
 
 import UIKit
-
-protocol ParticipantsInitialDelegate {
-    func didUpdateParticipants(participant: Int) -> Int
-}
-
 class InitialViewController: UIViewController {
 
     @IBOutlet weak var numberOfParticipantsTextField: UITextField!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var termsAndConditionsButton: UIButton!
+    @IBOutlet weak var aceptTermsSwitch: UISwitch!
     
-    private var delegate : ParticipantsInitialDelegate?
-    private var participant: Int? = 0
+    private var participant: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        aceptTermsSwitch.isOn = false
         startButton.layer.cornerRadius = startButton.bounds.height/8
     }
 
@@ -32,27 +28,22 @@ class InitialViewController: UIViewController {
     }
         
     @IBAction func startButtonTaped(_ sender: Any) {
-        if let amountText = numberOfParticipantsTextField.text, let amountNum = Int(amountText), amountNum > 0 {
+        if let amountText = numberOfParticipantsTextField.text, let amountNum = Int(amountText), amountNum > 0 && aceptTermsSwitch.isOn{
+            self.participant = amountNum
             
             let vc = TabBarController(nibName: "TabBarController", bundle: nil)
             vc.modalPresentationStyle = .fullScreen
-            
+
             self.present(vc, animated: true, completion: nil)
             
         } else {
-            let message = "Please enter the number of participants"
+            let message = "Please enter the number of participants and Accept the Terms and conditions to continue"
             let alert = UIAlertController(title: "Start", message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
     }
     
-//    func setup(participant: Int, delegate: ParticipantsInitialDelegate) {
-//        if let amountText = numberOfParticipantsTextField.text, let amountNum = Int(amountText), amountNum != 0 {
-//            delegate.didUpdateParticipants(participant: amountNum)
-//        }
-//        self.delegate = delegate
-//        self.participant = participant
-//    }
-
 }
+
+
