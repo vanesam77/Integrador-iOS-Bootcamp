@@ -30,37 +30,42 @@ class InitialViewController: UIViewController {
     }
         
     @IBAction func startButtonTaped(_ sender: Any) {
-        if validateInputText() {
-            //TAB BAR
+        if validateInputText() && validateSwitchIsOn(){
             let vc = TabBarController(nibName: "TabBarController", bundle: nil)
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
-            
-        } else {
-            let message = "Please enter the number of participants to continue"
-            let alert = UIAlertController(title: "Start", message: message, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            
         }
-        numberOfParticipantsTextField.text = ""
         startButton.isEnabled = true            
     }
     
     func validateInputText() -> Bool{
         if let amountText = numberOfParticipantsTextField.text, let amountNum = Int(amountText), amountNum > 0 && numberOfParticipantsTextField.hasText {
-//          aceptTermsSwitch.isOn
             self.participant = amountNum
             startButton.backgroundColor = .systemBlue
             return true
         } else {
+            let message = "Please enter the number of participants"
+            let alert = UIAlertController(title: "Start", message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
             startButton.isEnabled = false
             startButton.backgroundColor = .systemPink
         }
         return false
     }
-            
     
+    func validateSwitchIsOn() -> Bool{
+        if aceptTermsSwitch.isOn {
+            return true
+        } else{
+            let message = "Please accept the Terms and Conditions to continue"
+            let alert = UIAlertController(title: "Start", message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return false
+        }
+    }
 }
 
 
