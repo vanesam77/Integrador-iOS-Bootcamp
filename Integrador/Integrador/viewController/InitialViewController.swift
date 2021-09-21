@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InitialViewController: UIViewController {
+class InitialViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var numberOfParticipantsTextField: UITextField!
     @IBOutlet weak var startButton: UIButton!
@@ -21,8 +21,14 @@ class InitialViewController: UIViewController {
         aceptTermsSwitch.isOn = false
         startButton.layer.cornerRadius = startButton.bounds.height/8
         startButton.isEnabled = true
+        self.numberOfParticipantsTextField.delegate = self
     }
-
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
     @IBAction func termsAndConditionsButtonTapped(_ sender: Any) {
         let vc = TermsAndConditionViewController(nibName:"TermsAndConditionViewController", bundle: nil)
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
