@@ -30,7 +30,7 @@
                         <constraint firstAttribute="height" constant="48" id="mOh-8q-ORz"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" name="boredMediumColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of participants" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mMO-aG-H5d">
@@ -40,7 +40,7 @@
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiX-JZ-bWi">
                     <rect key="frame" x="20" y="286.5" width="374" height="50"/>
-                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <color key="backgroundColor" name="boredMediumColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="qQH-0W-Mmb"/>
                     </constraints>
@@ -57,12 +57,14 @@
                         <constraint firstAttribute="height" constant="36" id="S1j-AI-eqB"/>
                         <constraint firstAttribute="width" constant="188" id="h6p-NT-SzG"/>
                     </constraints>
+                    <color key="tintColor" name="boredAccentColor"/>
                     <state key="normal">
                         <attributedString key="attributedTitle">
                             <fragment content="Terms and conditions">
                                 <attributes>
-                                    <color key="NSColor" systemColor="linkColor"/>
+                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <font key="NSFont" metaFont="system" size="20"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                     <integer key="NSUnderline" value="1"/>
                                 </attributes>
                             </fragment>
@@ -75,17 +77,17 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Participants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05Y-g8-ZRh">
                     <rect key="frame" x="20" y="172" width="99" height="20.5"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" name="boredAccentColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Cgw-vv-83d">
                     <rect key="frame" x="20" y="359.5" width="51" height="31"/>
-                    <color key="tintColor" systemColor="systemBlueColor"/>
-                    <color key="onTintColor" name="AccentColor"/>
+                    <color key="tintColor" name="boredMediumColor"/>
+                    <color key="onTintColor" name="boredMediumColor"/>
                 </switch>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemTealColor"/>
+            <color key="backgroundColor" name="boredLightColor"/>
             <constraints>
                 <constraint firstItem="Cgw-vv-83d" firstAttribute="centerY" secondItem="0Tu-02-d0i" secondAttribute="centerY" id="0IA-gw-6Ac"/>
                 <constraint firstItem="BiX-JZ-bWi" firstAttribute="trailing" secondItem="mMO-aG-H5d" secondAttribute="trailing" id="2eq-94-dPq"/>
@@ -110,20 +112,17 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="boredAccentColor">
+            <color red="0.037102844570000001" green="0.0" blue="0.1882507205" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="boredLightColor">
+            <color red="0.85571306940000003" green="0.95629805329999995" blue="0.99609392880000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="boredMediumColor">
+            <color red="0.078319601710000006" green="0.56229597330000003" blue="0.91377133129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

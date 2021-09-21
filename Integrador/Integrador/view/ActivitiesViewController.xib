@@ -3,8 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,26 +21,27 @@
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4yv-AQ-wwT">
                     <rect key="frame" x="0.0" y="54" width="414" height="818"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" name="boredLightColor"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemTealColor"/>
+            <color key="backgroundColor" name="boredMediumColor"/>
             <constraints>
                 <constraint firstItem="4yv-AQ-wwT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="LMA-mc-mw3"/>
                 <constraint firstItem="4yv-AQ-wwT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="Vcv-sk-hP5"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4yv-AQ-wwT" secondAttribute="trailing" id="fbq-qA-ly0"/>
                 <constraint firstItem="4yv-AQ-wwT" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="10" id="qmY-Px-hts"/>
             </constraints>
+            <nil key="simulatedTopBarMetrics"/>
             <point key="canvasLocation" x="37.681159420289859" y="79.6875"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="boredLightColor">
+            <color red="0.85571306940000003" green="0.95629805329999995" blue="0.99609392880000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="boredMediumColor">
+            <color red="0.078319601710000006" green="0.56229597330000003" blue="0.91377133129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>

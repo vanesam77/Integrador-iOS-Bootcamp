@@ -11,8 +11,8 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UITabBar.appearance().barTintColor = .blue
-        tabBar.tintColor = .white
+        tabBar.tintColor = UIColor(named: "boredAccentColor")
+        tabBar.barTintColor = UIColor(named: "boredMediumColor")
         setupVCs()
     }
     

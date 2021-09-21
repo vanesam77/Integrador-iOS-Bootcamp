@@ -47,7 +47,7 @@ class InitialViewController: UIViewController, UITextFieldDelegate {
     func validateInputText() -> Bool{
         if let amountText = numberOfParticipantsTextField.text, let amountNum = Int(amountText), amountNum > 0 && numberOfParticipantsTextField.hasText {
             self.participant = amountNum
-            startButton.backgroundColor = .systemBlue
+            startButton.backgroundColor = UIColor(named: "boredMediumColor")
             return true
         } else {
             let message = "Please enter the number of participants"
