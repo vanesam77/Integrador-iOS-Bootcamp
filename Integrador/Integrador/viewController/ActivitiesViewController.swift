@@ -38,6 +38,7 @@ extension ActivitiesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = activities[indexPath.row].capitalized
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
 }

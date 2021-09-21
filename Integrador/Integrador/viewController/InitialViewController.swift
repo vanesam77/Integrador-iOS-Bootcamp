@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 class InitialViewController: UIViewController {
 
     @IBOutlet weak var numberOfParticipantsTextField: UITextField!
@@ -31,9 +32,15 @@ class InitialViewController: UIViewController {
         if let amountText = numberOfParticipantsTextField.text, let amountNum = Int(amountText), amountNum > 0 && aceptTermsSwitch.isOn{
             self.participant = amountNum
             
+//            NAVBAR
+//            let vc = ActivitiesViewController(nibName: "ActivitiesViewController", bundle: nil)
+//            let navigationController = UINavigationController(rootViewController: vc)
+//            navigationController.modalPresentationStyle = .fullScreen
+//            self.present(navigationController,animated: true, completion: nil)
+                        
+            //TAB BAR
             let vc = TabBarController(nibName: "TabBarController", bundle: nil)
             vc.modalPresentationStyle = .fullScreen
-
             self.present(vc, animated: true, completion: nil)
             
         } else {

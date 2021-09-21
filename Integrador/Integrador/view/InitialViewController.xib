@@ -24,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Bored" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBn-dH-zlb">
-                    <rect key="frame" x="140" y="144" width="134" height="48"/>
+                    <rect key="frame" x="140" y="74" width="134" height="48"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="134" id="eeg-XQ-dmR"/>
                         <constraint firstAttribute="height" constant="48" id="mOh-8q-ORz"/>
@@ -34,12 +34,12 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of participants" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mMO-aG-H5d">
-                    <rect key="frame" x="20" y="312.5" width="374" height="34"/>
+                    <rect key="frame" x="20" y="222.5" width="374" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiX-JZ-bWi">
-                    <rect key="frame" x="20" y="396.5" width="374" height="50"/>
+                    <rect key="frame" x="20" y="286.5" width="374" height="50"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="qQH-0W-Mmb"/>
@@ -51,31 +51,35 @@
                         <action selector="startButtonTaped:" destination="-1" eventType="touchUpInside" id="7dc-xF-JVY"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Tu-02-d0i">
-                    <rect key="frame" x="92" y="466.5" width="230" height="36"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Tu-02-d0i">
+                    <rect key="frame" x="113" y="357" width="188" height="36"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="230" id="5kN-Y5-4eS"/>
+                        <constraint firstAttribute="height" constant="36" id="S1j-AI-eqB"/>
+                        <constraint firstAttribute="width" constant="188" id="h6p-NT-SzG"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                    <state key="normal" title="Terms and conditions">
-                        <color key="titleColor" systemColor="linkColor"/>
+                    <state key="normal">
+                        <attributedString key="attributedTitle">
+                            <fragment content="Terms and conditions">
+                                <attributes>
+                                    <color key="NSColor" systemColor="linkColor"/>
+                                    <font key="NSFont" metaFont="system" size="20"/>
+                                    <integer key="NSUnderline" value="1"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
                     </state>
                     <connections>
                         <action selector="termsAndConditionsButtonTapped:" destination="-1" eventType="touchUpInside" id="oDJ-6U-KNH"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Participants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05Y-g8-ZRh">
-                    <rect key="frame" x="20" y="242" width="99" height="20.5"/>
+                    <rect key="frame" x="20" y="172" width="99" height="20.5"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Cgw-vv-83d">
-                    <rect key="frame" x="46" y="469" width="49" height="31"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="47" id="30s-9S-jtR"/>
-                        <constraint firstAttribute="height" constant="31" id="Ief-d5-awM"/>
-                    </constraints>
+                    <rect key="frame" x="20" y="359.5" width="51" height="31"/>
                     <color key="tintColor" systemColor="systemBlueColor"/>
                     <color key="onTintColor" name="AccentColor"/>
                 </switch>
@@ -83,23 +87,23 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemTealColor"/>
             <constraints>
+                <constraint firstItem="Cgw-vv-83d" firstAttribute="centerY" secondItem="0Tu-02-d0i" secondAttribute="centerY" id="0IA-gw-6Ac"/>
                 <constraint firstItem="BiX-JZ-bWi" firstAttribute="trailing" secondItem="mMO-aG-H5d" secondAttribute="trailing" id="2eq-94-dPq"/>
                 <constraint firstItem="05Y-g8-ZRh" firstAttribute="leading" secondItem="mMO-aG-H5d" secondAttribute="leading" id="42I-Tf-TRr"/>
-                <constraint firstItem="Cgw-vv-83d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="46" id="5HT-RR-v82"/>
                 <constraint firstItem="BiX-JZ-bWi" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="6os-Zf-7Rd"/>
                 <constraint firstItem="gBn-dH-zlb" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="DOv-GC-PMn"/>
-                <constraint firstItem="mMO-aG-H5d" firstAttribute="top" secondItem="05Y-g8-ZRh" secondAttribute="bottom" constant="50" id="GLH-gX-1Bh"/>
+                <constraint firstItem="mMO-aG-H5d" firstAttribute="top" secondItem="05Y-g8-ZRh" secondAttribute="bottom" constant="30" id="GLH-gX-1Bh"/>
                 <constraint firstItem="BiX-JZ-bWi" firstAttribute="leading" secondItem="mMO-aG-H5d" secondAttribute="leading" id="HoK-tz-c3H"/>
-                <constraint firstItem="gBn-dH-zlb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="I32-PV-jZK"/>
+                <constraint firstItem="gBn-dH-zlb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="I32-PV-jZK"/>
                 <constraint firstItem="mMO-aG-H5d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="RnM-pP-00B"/>
                 <constraint firstItem="mMO-aG-H5d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="TDn-KR-EAn"/>
-                <constraint firstItem="0Tu-02-d0i" firstAttribute="top" secondItem="BiX-JZ-bWi" secondAttribute="bottom" constant="20" id="Vud-Ng-oiB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mMO-aG-H5d" secondAttribute="trailing" constant="20" id="aMh-s6-QES"/>
-                <constraint firstItem="Cgw-vv-83d" firstAttribute="centerY" secondItem="0Tu-02-d0i" secondAttribute="centerY" id="iON-W0-jsU"/>
+                <constraint firstItem="0Tu-02-d0i" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="ad8-q4-q4M"/>
+                <constraint firstItem="0Tu-02-d0i" firstAttribute="leading" secondItem="Cgw-vv-83d" secondAttribute="trailing" constant="44" id="pAl-GQ-L1l"/>
+                <constraint firstItem="Cgw-vv-83d" firstAttribute="leading" secondItem="BiX-JZ-bWi" secondAttribute="leading" id="qqM-zP-nmf"/>
                 <constraint firstItem="05Y-g8-ZRh" firstAttribute="top" secondItem="gBn-dH-zlb" secondAttribute="bottom" constant="50" id="qtD-02-Dje"/>
-                <constraint firstItem="Cgw-vv-83d" firstAttribute="top" secondItem="BiX-JZ-bWi" secondAttribute="bottom" constant="22.5" id="qvO-xp-IMV"/>
-                <constraint firstItem="BiX-JZ-bWi" firstAttribute="top" secondItem="mMO-aG-H5d" secondAttribute="bottom" constant="50" id="sLb-0W-0TM"/>
-                <constraint firstItem="0Tu-02-d0i" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="vPH-nQ-mYb"/>
+                <constraint firstItem="0Tu-02-d0i" firstAttribute="top" secondItem="BiX-JZ-bWi" secondAttribute="bottom" constant="20.5" id="rin-OE-R9Z"/>
+                <constraint firstItem="BiX-JZ-bWi" firstAttribute="top" secondItem="mMO-aG-H5d" secondAttribute="bottom" constant="30" id="sLb-0W-0TM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mMO-aG-H5d" secondAttribute="trailing" constant="20" id="ykF-Hz-QnK"/>
             </constraints>
             <point key="canvasLocation" x="-23.188405797101453" y="87.723214285714278"/>
