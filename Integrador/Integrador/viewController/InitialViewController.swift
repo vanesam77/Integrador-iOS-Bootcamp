@@ -20,6 +20,7 @@ class InitialViewController: UIViewController {
         super.viewDidLoad()
         aceptTermsSwitch.isOn = false
         startButton.layer.cornerRadius = startButton.bounds.height/8
+        startButton.isEnabled = true
     }
 
     @IBAction func termsAndConditionsButtonTapped(_ sender: Any) {
@@ -29,27 +30,36 @@ class InitialViewController: UIViewController {
     }
         
     @IBAction func startButtonTaped(_ sender: Any) {
-        if let amountText = numberOfParticipantsTextField.text, let amountNum = Int(amountText), amountNum > 0 && aceptTermsSwitch.isOn{
-            self.participant = amountNum
-            
-//            NAVBAR
-//            let vc = ActivitiesViewController(nibName: "ActivitiesViewController", bundle: nil)
-//            let navigationController = UINavigationController(rootViewController: vc)
-//            navigationController.modalPresentationStyle = .fullScreen
-//            self.present(navigationController,animated: true, completion: nil)
-                        
+        if validateInputText() {
             //TAB BAR
             let vc = TabBarController(nibName: "TabBarController", bundle: nil)
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
             
         } else {
-            let message = "Please enter the number of participants and Accept the Terms and conditions to continue"
+            let message = "Please enter the number of participants to continue"
             let alert = UIAlertController(title: "Start", message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
+            
         }
+        numberOfParticipantsTextField.text = ""
+        startButton.isEnabled = true            
     }
+    
+    func validateInputText() -> Bool{
+        if let amountText = numberOfParticipantsTextField.text, let amountNum = Int(amountText), amountNum > 0 && numberOfParticipantsTextField.hasText {
+//          aceptTermsSwitch.isOn
+            self.participant = amountNum
+            startButton.backgroundColor = .systemBlue
+            return true
+        } else {
+            startButton.isEnabled = false
+            startButton.backgroundColor = .systemPink
+        }
+        return false
+    }
+            
     
 }
 
