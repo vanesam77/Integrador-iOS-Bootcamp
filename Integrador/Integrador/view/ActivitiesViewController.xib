@@ -19,9 +19,13 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4yv-AQ-wwT">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4yv-AQ-wwT">
                     <rect key="frame" x="0.0" y="54" width="414" height="818"/>
                     <color key="backgroundColor" name="boredLightColor"/>
+                    <color key="separatorColor" name="boredAccentColor"/>
+                    <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                    <color key="sectionIndexColor" name="boredAccentColor"/>
+                    <color key="sectionIndexBackgroundColor" name="boredLightColor"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -37,11 +41,14 @@
         </view>
     </objects>
     <resources>
+        <namedColor name="boredAccentColor">
+            <color red="0.037000000476837158" green="0.0" blue="0.18799999356269836" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="boredLightColor">
-            <color red="0.85571306940000003" green="0.95629805329999995" blue="0.99609392880000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.85600000619888306" green="0.95599997043609619" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="boredMediumColor">
-            <color red="0.078319601710000006" green="0.56229597330000003" blue="0.91377133129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.078000001609325409" green="0.56199997663497925" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

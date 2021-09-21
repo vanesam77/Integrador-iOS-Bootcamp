@@ -19,6 +19,9 @@ class ActivitiesViewController: UIViewController {
         self.activitiesTableView.dataSource = self
         self.activitiesTableView.delegate = self
         self.activitiesTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.activitiesTableView.separatorColor = UIColor(named: "boredAccentColor")
+        navigationController?.navigationBar.backgroundColor = UIColor(named: "boredMediumColor")
+        navigationController?.navigationBar.tintColor = UIColor(named: "boredAccentColor")
     }
     
     private func showQuestions(for activity: String){
@@ -39,6 +42,9 @@ extension ActivitiesViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = activities[indexPath.row].capitalized
         cell.accessoryType = .disclosureIndicator
+        cell.backgroundColor = UIColor(named: "boredLightColor")
+        cell.textLabel?.textColor = UIColor(named: "boredAccentColor")
+        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 25)
         return cell
     }
 }
@@ -48,7 +54,6 @@ extension ActivitiesViewController: UITableViewDelegate {
         self.activity = activities[indexPath.row]
         showQuestions(for: self.activity)
     }
-    
 }
 
 

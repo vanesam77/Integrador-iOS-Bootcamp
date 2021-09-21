@@ -23,7 +23,8 @@ class SuggestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.navigationBar.backgroundColor = UIColor(named: "boredMediumColor")
+        navigationController?.navigationBar.tintColor = UIColor(named: "boredAccentColor")
         tryAnotherButton.layer.cornerRadius = tryAnotherButton.bounds.height/8
         
         if let activity = theActivity {

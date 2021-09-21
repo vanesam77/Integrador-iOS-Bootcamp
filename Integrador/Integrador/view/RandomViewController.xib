@@ -80,14 +80,22 @@
                     <color key="textColor" name="boredAccentColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Pu-Sw-f8K">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Pu-Sw-f8K">
                     <rect key="frame" x="322" y="244" width="62" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="62" id="9w5-md-RyD"/>
+                        <constraint firstAttribute="height" constant="30" id="OhO-Op-8xl"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                     <color key="textColor" name="boredAccentColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiU-Z0-DSr">
                     <rect key="frame" x="322" y="334" width="62" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="62" id="IAE-Nj-RXq"/>
+                        <constraint firstAttribute="height" constant="30" id="jHw-5d-n4O"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                     <color key="textColor" name="boredAccentColor"/>
                     <nil key="highlightedColor"/>
@@ -147,13 +155,13 @@
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="boredAccentColor">
-            <color red="0.037102844570000001" green="0.0" blue="0.1882507205" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.037000000476837158" green="0.0" blue="0.18799999356269836" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="boredLightColor">
-            <color red="0.85571306940000003" green="0.95629805329999995" blue="0.99609392880000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.85600000619888306" green="0.95599997043609619" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="boredMediumColor">
-            <color red="0.078319601710000006" green="0.56229597330000003" blue="0.91377133129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.078000001609325409" green="0.56199997663497925" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
