@@ -8,9 +8,21 @@
 import UIKit
 class InitialViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var numberOfParticipantsTextField: UITextField!
-    @IBOutlet weak var minValueTextField: UITextField!
-    @IBOutlet weak var maxValueTextField: UITextField!
+    @IBOutlet weak var numberOfParticipantsTextField: UITextField! {
+        didSet {
+            numberOfParticipantsTextField.delegate = self
+        }
+    }
+    @IBOutlet weak var minValueTextField: UITextField! {
+        didSet {
+            minValueTextField.delegate = self
+        }
+    }
+    @IBOutlet weak var maxValueTextField: UITextField! {
+        didSet {
+            maxValueTextField.delegate = self
+        }
+    }
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var termsAndConditionsButton: UIButton!
     @IBOutlet weak var aceptTermsSwitch: UISwitch!
@@ -21,7 +33,6 @@ class InitialViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         aceptTermsSwitch.isOn = false
         startButton.layer.cornerRadius = startButton.bounds.height/8
-        self.numberOfParticipantsTextField.delegate = self
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
