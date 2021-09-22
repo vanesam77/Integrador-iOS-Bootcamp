@@ -29,7 +29,7 @@
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" name="boredLightColor"/>
+            <color key="backgroundColor" name="boredMediumColor"/>
             <constraints>
                 <constraint firstItem="4yv-AQ-wwT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="LMA-mc-mw3"/>
                 <constraint firstItem="4yv-AQ-wwT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="Vcv-sk-hP5"/>
@@ -46,6 +46,9 @@
         </namedColor>
         <namedColor name="boredLightColor">
             <color red="0.85600000619888306" green="0.95599997043609619" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="boredMediumColor">
+            <color red="0.078000001609325409" green="0.56199997663497925" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
