@@ -30,7 +30,11 @@ class ActivitiesViewController: UIViewController {
         suggestionVC.theActivity = self.activity
         navigationController?.pushViewController(suggestionVC, animated: true)
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.activitiesTableView.reloadData()
+    }
 }
 
 extension ActivitiesViewController: UITableViewDataSource {

@@ -8,7 +8,7 @@
 import UIKit
 
 class InitialViewController: UIViewController, UITextFieldDelegate {
-
+    
     @IBOutlet weak var numberOfParticipantsTextField: UITextField!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var termsAndConditionsButton: UIButton!
@@ -35,7 +35,7 @@ class InitialViewController: UIViewController, UITextFieldDelegate {
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         self.present(vc, animated: true, completion: nil)
     }
-        
+    
     @IBAction func startButtonTaped(_ sender: Any) {
         if validateInputText() && validateSwitchIsOn(){
             let vc = TabBarController(nibName: "TabBarController", bundle: nil)
