@@ -86,7 +86,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Cgw-vv-83d">
-                    <rect key="frame" x="20" y="530" width="51" height="31"/>
+                    <rect key="frame" x="20" y="530" width="75" height="31"/>
                     <color key="tintColor" name="boredMediumColor"/>
                     <color key="onTintColor" name="boredMediumColor"/>
                 </switch>

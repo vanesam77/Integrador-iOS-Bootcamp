@@ -25,6 +25,10 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUd-1n-igl">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                    <color key="backgroundColor" name="boredLightColor"/>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3l0-U6-dpP">
                     <rect key="frame" x="30" y="762" width="354" height="50"/>
                     <color key="backgroundColor" name="AccentColor"/>
@@ -108,12 +112,14 @@
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" name="boredLightColor"/>
+            <color key="backgroundColor" name="boredMediumColor"/>
             <constraints>
                 <constraint firstItem="4Pu-Sw-f8K" firstAttribute="centerY" secondItem="EdN-gr-y1T" secondAttribute="centerY" id="1Ir-bA-QfE"/>
                 <constraint firstItem="p0P-e5-c0E" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="3Qu-Yn-cJE"/>
                 <constraint firstItem="845-W5-Vo6" firstAttribute="top" secondItem="dgX-cB-GBd" secondAttribute="bottom" constant="40" id="5B8-Sv-Vud"/>
                 <constraint firstItem="EdN-gr-y1T" firstAttribute="centerY" secondItem="p0l-mz-6ZD" secondAttribute="centerY" id="5fy-b9-Xgo"/>
+                <constraint firstItem="FUd-1n-igl" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="7rm-Xh-6mF"/>
+                <constraint firstAttribute="bottom" secondItem="FUd-1n-igl" secondAttribute="bottom" id="82x-3Z-Dne"/>
                 <constraint firstItem="3Hj-y6-QHn" firstAttribute="top" secondItem="v7e-TV-AKb" secondAttribute="bottom" constant="60" id="AzH-qY-CFC"/>
                 <constraint firstItem="dgX-cB-GBd" firstAttribute="top" secondItem="p0l-mz-6ZD" secondAttribute="bottom" constant="40" id="Bo0-Ir-8uK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3l0-U6-dpP" secondAttribute="bottom" constant="50" id="C9U-CQ-5cg"/>
@@ -136,8 +142,10 @@
                 <constraint firstItem="3Hj-y6-QHn" firstAttribute="leading" secondItem="v7e-TV-AKb" secondAttribute="leading" id="pKL-38-UiK"/>
                 <constraint firstItem="dgX-cB-GBd" firstAttribute="trailing" secondItem="p0l-mz-6ZD" secondAttribute="trailing" id="s9J-n2-9Hb"/>
                 <constraint firstItem="845-W5-Vo6" firstAttribute="leading" secondItem="dgX-cB-GBd" secondAttribute="leading" id="sCV-dg-tHO"/>
+                <constraint firstItem="FUd-1n-igl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="suP-4J-Vyl"/>
                 <constraint firstItem="p0P-e5-c0E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="vh5-YP-XtE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Pu-Sw-f8K" secondAttribute="trailing" constant="30" id="vyR-ag-MAs"/>
+                <constraint firstItem="FUd-1n-igl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="waf-P5-Pda"/>
                 <constraint firstItem="v7e-TV-AKb" firstAttribute="centerY" secondItem="dgX-cB-GBd" secondAttribute="centerY" id="xTI-eh-a5o"/>
             </constraints>
             <point key="canvasLocation" x="37.681159420289859" y="63.616071428571423"/>
