@@ -22,9 +22,12 @@ class ResultsViewModel {
     }
     
     func getRandomSuggestion(completion: @escaping (() -> Void)) {
-        SuggestionService().getSuggestionRandom { suggestion in
-            self.suggestion = suggestion
-            completion()
+        if let participant = participant,
+           let priceRange = priceRange {
+            SuggestionService().getSuggestionRandomForRange(participants: participant, minprice: priceRange.0, maxprice: priceRange.1) { suggestion in
+                self.suggestion = suggestion
+                completion()
+            }
         }
     }
     
@@ -41,6 +44,17 @@ class ResultsViewModel {
     func getSuggestionForParticipants(completion: @escaping () -> Void) {
         if let participant = participant {
             SuggestionService().getSuggestionRandomForParticipants(participant) { suggestion in
+                self.suggestion = suggestion
+                completion()
+            }
+        }
+    }
+    
+    func getSuggestionForPriceRange(completion: @escaping () -> Void) {
+        if let activity = activity,
+           let participant = participant,
+           let priceRange = priceRange {
+            SuggestionService().getSuggestionForRange(for: activity, participants: participant, minprice: priceRange.0, maxprice: priceRange.1) { suggestion in
                 self.suggestion = suggestion
                 completion()
             }

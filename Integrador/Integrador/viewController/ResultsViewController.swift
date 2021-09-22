@@ -47,7 +47,7 @@ class ResultsViewController: UIViewController {
             typeLabel.isHidden = true
             typeImageView.isHidden = true
             
-            viewModel.getSuggestion() {
+            viewModel.getSuggestionForPriceRange() {
                 guard let suggestion = self.viewModel.suggestion else { return }
                 self.activityLabel.text = suggestion.activity
                 self.participantsLabel.text = "\(suggestion.participants)"
@@ -59,7 +59,7 @@ class ResultsViewController: UIViewController {
             typeImageView.isHidden = false
             
             if let participant = viewModel.participant {
-                viewModel.getSuggestionForParticipants {
+                viewModel.getRandomSuggestion {
                     guard let suggestion = self.viewModel.suggestion else { return }
                     self.activityLabel.text = suggestion.activity
                     self.participantsLabel.text = "\(participant)"
@@ -96,7 +96,7 @@ class ResultsViewController: UIViewController {
         switch viewModel.type {
         case .suggestion:
             
-            viewModel.getSuggestion {
+            viewModel.getSuggestionForPriceRange {
                 guard let suggestion = self.viewModel.suggestion else { return }
                 self.activityLabel.text = suggestion.activity
                 self.participantsLabel.text = "\(suggestion.participants)"
@@ -104,7 +104,7 @@ class ResultsViewController: UIViewController {
             }
 
         default:
-            viewModel.getSuggestionForParticipants {
+            viewModel.getRandomSuggestion {
                 guard let suggestion = self.viewModel.suggestion else { return }
                 self.activityLabel.text = suggestion.activity
                 self.participantsLabel.text = "\(suggestion.participants)"
