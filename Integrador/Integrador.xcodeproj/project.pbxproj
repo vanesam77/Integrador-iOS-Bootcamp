@@ -14,10 +14,10 @@
 		3ADF141326FB7A7900B353E1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF141226FB7A7900B353E1 /* TabBarController.swift */; };
 		3ADF141526FB7AAA00B353E1 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF141426FB7AAA00B353E1 /* InitialViewController.swift */; };
 		3ADF141726FB7B0B00B353E1 /* TermsAndConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF141626FB7B0B00B353E1 /* TermsAndConditionViewController.swift */; };
-		3ADF141A26FB7BDE00B353E1 /* SuggestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ADF141826FB7BDE00B353E1 /* SuggestionViewController.xib */; };
 		3ADF141B26FB7BDE00B353E1 /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ADF141926FB7BDE00B353E1 /* ResultsViewController.xib */; };
-		A84B59A126F62AA8002B3F12 /* TermsAndConditionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84B599F26F62AA8002B3F12 /* TermsAndConditionViewController.xib */; };
-		A84B59A526F654AC002B3F12 /* ActivitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84B59A326F654AC002B3F12 /* ActivitiesViewController.xib */; };
+		3ADF141F26FB81FA00B353E1 /* InitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ADF141C26FB81FA00B353E1 /* InitialViewController.xib */; };
+		3ADF142026FB81FA00B353E1 /* TermsAndConditionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ADF141D26FB81FA00B353E1 /* TermsAndConditionViewController.xib */; };
+		3ADF142126FB81FA00B353E1 /* ActivitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ADF141E26FB81FA00B353E1 /* ActivitiesViewController.xib */; };
 		A84B59B426F668EA002B3F12 /* AlamofireAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B59B326F668EA002B3F12 /* AlamofireAPIClient.swift */; };
 		A84B59B826F67AE9002B3F12 /* SuggestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B59B726F67AE9002B3F12 /* SuggestionService.swift */; };
 		A84B59BA26F67B75002B3F12 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B59B926F67B75002B3F12 /* Suggestion.swift */; };
@@ -25,7 +25,6 @@
 		A8FDD6A826F51A920094301E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FDD6A726F51A920094301E /* SceneDelegate.swift */; };
 		A8FDD6AF26F51A940094301E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8FDD6AE26F51A940094301E /* Assets.xcassets */; };
 		A8FDD6B226F51A940094301E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8FDD6B026F51A940094301E /* LaunchScreen.storyboard */; };
-		A8FDD6C426F51C2A0094301E /* InitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8FDD6C226F51C2A0094301E /* InitialViewController.xib */; };
 		CE4007FC3E6404722BD39BD3 /* Pods_Integrador.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B10B03D311E6220540550BC1 /* Pods_Integrador.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,10 +36,10 @@
 		3ADF141226FB7A7900B353E1 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3ADF141426FB7AAA00B353E1 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		3ADF141626FB7B0B00B353E1 /* TermsAndConditionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsAndConditionViewController.swift; sourceTree = "<group>"; };
-		3ADF141826FB7BDE00B353E1 /* SuggestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuggestionViewController.xib; sourceTree = "<group>"; };
 		3ADF141926FB7BDE00B353E1 /* ResultsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultsViewController.xib; sourceTree = "<group>"; };
-		A84B599F26F62AA8002B3F12 /* TermsAndConditionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsAndConditionViewController.xib; sourceTree = "<group>"; };
-		A84B59A326F654AC002B3F12 /* ActivitiesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesViewController.xib; sourceTree = "<group>"; };
+		3ADF141C26FB81FA00B353E1 /* InitialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InitialViewController.xib; sourceTree = "<group>"; };
+		3ADF141D26FB81FA00B353E1 /* TermsAndConditionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TermsAndConditionViewController.xib; sourceTree = "<group>"; };
+		3ADF141E26FB81FA00B353E1 /* ActivitiesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivitiesViewController.xib; sourceTree = "<group>"; };
 		A84B59B326F668EA002B3F12 /* AlamofireAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAPIClient.swift; sourceTree = "<group>"; };
 		A84B59B726F67AE9002B3F12 /* SuggestionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionService.swift; sourceTree = "<group>"; };
 		A84B59B926F67B75002B3F12 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
@@ -50,7 +49,6 @@
 		A8FDD6AE26F51A940094301E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8FDD6B126F51A940094301E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8FDD6B326F51A940094301E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8FDD6C226F51C2A0094301E /* InitialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialViewController.xib; sourceTree = "<group>"; };
 		AE40554A14A71AB01A5AA61C /* Pods-Integrador.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Integrador.release.xcconfig"; path = "Target Support Files/Pods-Integrador/Pods-Integrador.release.xcconfig"; sourceTree = "<group>"; };
 		B10B03D311E6220540550BC1 /* Pods_Integrador.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Integrador.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9B26F89767ED9C082F7AF8 /* Pods-Integrador.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Integrador.debug.xcconfig"; path = "Target Support Files/Pods-Integrador/Pods-Integrador.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,11 +163,10 @@
 		A8FDD6BC26F51B120094301E /* view */ = {
 			isa = PBXGroup;
 			children = (
+				3ADF141E26FB81FA00B353E1 /* ActivitiesViewController.xib */,
+				3ADF141C26FB81FA00B353E1 /* InitialViewController.xib */,
+				3ADF141D26FB81FA00B353E1 /* TermsAndConditionViewController.xib */,
 				3ADF141926FB7BDE00B353E1 /* ResultsViewController.xib */,
-				3ADF141826FB7BDE00B353E1 /* SuggestionViewController.xib */,
-				A8FDD6C226F51C2A0094301E /* InitialViewController.xib */,
-				A84B599F26F62AA8002B3F12 /* TermsAndConditionViewController.xib */,
-				A84B59A326F654AC002B3F12 /* ActivitiesViewController.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -261,13 +258,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ADF142026FB81FA00B353E1 /* TermsAndConditionViewController.xib in Resources */,
 				3ADF141B26FB7BDE00B353E1 /* ResultsViewController.xib in Resources */,
-				A84B59A526F654AC002B3F12 /* ActivitiesViewController.xib in Resources */,
-				A84B59A126F62AA8002B3F12 /* TermsAndConditionViewController.xib in Resources */,
 				A8FDD6B226F51A940094301E /* LaunchScreen.storyboard in Resources */,
 				A8FDD6AF26F51A940094301E /* Assets.xcassets in Resources */,
-				3ADF141A26FB7BDE00B353E1 /* SuggestionViewController.xib in Resources */,
-				A8FDD6C426F51C2A0094301E /* InitialViewController.xib in Resources */,
+				3ADF141F26FB81FA00B353E1 /* InitialViewController.xib in Resources */,
+				3ADF142126FB81FA00B353E1 /* ActivitiesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

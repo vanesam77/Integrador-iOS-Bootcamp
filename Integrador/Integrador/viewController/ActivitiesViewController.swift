@@ -31,7 +31,7 @@ class ActivitiesViewController: UIViewController {
     }
     
     private func showQuestions(for activity: String){
-        let suggestionVC = ResultsViewController(viewModel: ResultsViewModel(type: .suggestion, activity: activity, participant: activitiesViewModel.participant))
+        let suggestionVC = ResultsViewController(viewModel: ResultsViewModel(type: .suggestion, activity: activity, participant: activitiesViewModel.participant, priceRange: activitiesViewModel.priceRange))
         suggestionVC.title = activity.capitalized
         navigationController?.pushViewController(suggestionVC, animated: true)
     }
@@ -45,6 +45,11 @@ extension ActivitiesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = activitiesViewModel.activities[indexPath.row].capitalized
+        cell.accessoryType = .disclosureIndicator
+        cell.backgroundColor = UIColor(named: "boredLightColor")
+        cell.textLabel?.textColor = UIColor(named: "boredAccentColor")
+        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 25)
+        cell.selectionStyle = .default
         return cell
     }
 }

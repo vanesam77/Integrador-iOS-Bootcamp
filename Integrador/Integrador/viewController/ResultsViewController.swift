@@ -64,7 +64,7 @@ class ResultsViewController: UIViewController {
                     self.activityLabel.text = suggestion.activity
                     self.participantsLabel.text = "\(participant)"
                     self.priceLabel.text = self.getPriceRange(for: suggestion.price)
-                    self.typeLabel.text = suggestion.type
+                    self.typeLabel.text = suggestion.type.capitalized
                 }
             } else {
                 viewModel.getRandomSuggestion {
@@ -72,7 +72,7 @@ class ResultsViewController: UIViewController {
                     self.activityLabel.text = suggestion.activity
                     self.participantsLabel.text = "\(suggestion.participants)"
                     self.priceLabel.text = self.getPriceRange(for: suggestion.price)
-                    self.typeLabel.text = suggestion.type
+                    self.typeLabel.text = suggestion.type.capitalized
                 }
             }
         }

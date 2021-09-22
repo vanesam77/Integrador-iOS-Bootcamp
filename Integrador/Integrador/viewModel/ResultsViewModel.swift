@@ -9,14 +9,16 @@ import Foundation
 
 class ResultsViewModel {
     let type: Screen
-    var activity: String?
+    let activity: String?
     let participant: Int?
+    let priceRange: (Double, Double)?
     var suggestion: Suggestion? = nil
     
-    init(type: Screen, activity: String?, participant: Int?) {
+    init(type: Screen, activity: String?, participant: Int?, priceRange: (Double, Double)?) {
         self.type = type
         self.activity = activity
         self.participant = participant
+        self.priceRange = priceRange
     }
     
     func getRandomSuggestion(completion: @escaping (() -> Void)) {

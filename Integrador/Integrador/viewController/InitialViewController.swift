@@ -9,16 +9,8 @@ import UIKit
 class InitialViewController: UIViewController {
 
     @IBOutlet weak var numberOfParticipantsTextField: UITextField!
-    @IBOutlet weak var minValueTextField: UITextField! {
-        didSet {
-            
-        }
-    }
-    @IBOutlet weak var maxValueTextField: UITextField! {
-        didSet {
-            
-        }
-    }
+    @IBOutlet weak var minValueTextField: UITextField!
+    @IBOutlet weak var maxValueTextField: UITextField!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var termsAndConditionsButton: UIButton!
     @IBOutlet weak var aceptTermsSwitch: UISwitch!
@@ -33,7 +25,7 @@ class InitialViewController: UIViewController {
 
     @IBAction func termsAndConditionsButtonTapped(_ sender: Any) {
         let vc = TermsAndConditionViewController(nibName:"TermsAndConditionViewController", bundle: nil)
-        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
         
@@ -47,9 +39,10 @@ class InitialViewController: UIViewController {
             let vc = TabBarController(nibName: "TabBarController", bundle: nil)
             vc.viewControllers = [
                 createNavController(for: ActivitiesViewController(viewModel: ActivitiesViewModel(participant: participant, priceRange: (minValueNum, maxValueNum))), title: "Activities", image: UIImage(systemName: "list.dash")!),
-                createNavController(for: ResultsViewController(viewModel: ResultsViewModel(type: .random, activity: nil, participant: participant)), title: "Random", image: UIImage(systemName: "shuffle")!),
+                createNavController(for: ResultsViewController(viewModel: ResultsViewModel(type: .random, activity: nil, participant: participant, priceRange: (minValueNum, maxValueNum))), title: "Random", image: UIImage(systemName: "shuffle")!),
             ]
             
+            startButton.backgroundColor = UIColor(named: "boredMediumColor")
             vc.modalPresentationStyle = .fullScreen
 
             self.present(vc, animated: true, completion: nil)
@@ -59,6 +52,7 @@ class InitialViewController: UIViewController {
             let alert = UIAlertController(title: "Start", message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
+            startButton.backgroundColor = .systemPink
         }
     }
     
@@ -68,12 +62,9 @@ class InitialViewController: UIViewController {
         let navController = UINavigationController(rootViewController: rootViewController)
         navController.tabBarItem.title = title
         navController.tabBarItem.image = image
-        navController.navigationBar.prefersLargeTitles = true
         rootViewController.navigationItem.title = title
         navController.navigationBar.backgroundColor = .systemTeal
         return navController
     
-}
-
-
+    }
 }
