@@ -6,22 +6,21 @@
 //
 
 import UIKit
-
 class InitialViewController: UIViewController, UITextFieldDelegate {
-    
+
     @IBOutlet weak var numberOfParticipantsTextField: UITextField!
+    @IBOutlet weak var minValueTextField: UITextField!
+    @IBOutlet weak var maxValueTextField: UITextField!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var termsAndConditionsButton: UIButton!
     @IBOutlet weak var aceptTermsSwitch: UISwitch!
-    @IBOutlet weak var minPrice: UITextField!
-    @IBOutlet weak var maxPrice: UITextField!
+    
     private var participant: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         aceptTermsSwitch.isOn = false
         startButton.layer.cornerRadius = startButton.bounds.height/8
-        startButton.isEnabled = true
         self.numberOfParticipantsTextField.delegate = self
     }
     
@@ -29,41 +28,50 @@ class InitialViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         return false
     }
-    
+
     @IBAction func termsAndConditionsButtonTapped(_ sender: Any) {
         let vc = TermsAndConditionViewController(nibName:"TermsAndConditionViewController", bundle: nil)
-        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
-    
+        
     @IBAction func startButtonTaped(_ sender: Any) {
-        if validateInputText() && validateSwitchIsOn(){
-            let vc = TabBarController(nibName: "TabBarController", bundle: nil)
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
-        }
-        startButton.isEnabled = true            
-    }
-    
-    func validateInputText() -> Bool{
-        if let amountText = numberOfParticipantsTextField.text, let amountNum = Int(amountText),
-           let amountMinText = minPrice.text, let amountMinPrice = Double(amountMinText),
-           let amountMaxText = maxPrice.text, let amountMaxPrice = Double(amountMaxText),
-           numberOfParticipantsTextField.hasText && minPrice.hasText && maxPrice.hasText &&
-            amountNum > 0 && amountMinPrice >= 0 , amountMaxPrice <= 1 && amountMinPrice < amountMaxPrice {
+        if let amountText = numberOfParticipantsTextField.text,
+           let minValue = minValueTextField.text, let maxValue = maxValueTextField.text,
+           let amountNum = Int(amountText), let minValueNum = Double(minValue),
+           let maxValueNum = Double(maxValue), amountNum > 0 && minValueNum >= 0 && maxValueNum <= 1 && minValueNum <= maxValueNum && validateSwitchIsOn() {
             self.participant = amountNum
+            
+            let vc = TabBarController(nibName: "TabBarController", bundle: nil)
+            vc.viewControllers = [
+                createNavController(for: ActivitiesViewController(viewModel: ActivitiesViewModel(participant: participant, priceRange: (minValueNum, maxValueNum))), title: "Activities", image: UIImage(systemName: "list.dash")!),
+                createNavController(for: ResultsViewController(viewModel: ResultsViewModel(type: .random, activity: nil, participant: participant, priceRange: (minValueNum, maxValueNum))), title: "Random", image: UIImage(systemName: "shuffle")!),
+            ]
+            
             startButton.backgroundColor = UIColor(named: "boredMediumColor")
-            return true
+            vc.modalPresentationStyle = .fullScreen
+
+            self.present(vc, animated: true, completion: nil)
+            
         } else {
-            let message = "Please enter the number of participants and range of price between 0 and 1"
+            let message = "Please enter the number of participants and Accept the Terms and conditions to continue"
             let alert = UIAlertController(title: "Start", message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
-            
-            startButton.isEnabled = false
             startButton.backgroundColor = .systemPink
         }
-        return false
+    }
+    
+    fileprivate func createNavController(for rootViewController: UIViewController,
+                                         title: String,
+                                         image: UIImage) -> UIViewController {
+        let navController = UINavigationController(rootViewController: rootViewController)
+        navController.tabBarItem.title = title
+        navController.tabBarItem.image = image
+        navController.navigationBar.prefersLargeTitles = true
+        rootViewController.navigationItem.title = title
+        navController.navigationBar.backgroundColor = .systemTeal
+        return navController
     }
     
     func validateSwitchIsOn() -> Bool{
@@ -78,5 +86,3 @@ class InitialViewController: UIViewController, UITextFieldDelegate {
         }
     }
 }
-
-

@@ -111,7 +111,7 @@ class SuggestionService {
         }
     }
     
-    func getSuggestionRandomForRange(for activityType: String, participants: Int, minprice: Double, maxprice: Double, completion: @escaping ((Suggestion)->Void)) {
+    func getSuggestionRandomForRange(participants: Int, minprice: Double, maxprice: Double, completion: @escaping ((Suggestion)->Void)) {
         let suggestionURL = "https://www.boredapi.com/api/activity?&participants=\(participants)&minprice=\(minprice)&maxprice=\(maxprice)"
         apiClient.get(url: suggestionURL) { response in
             switch response {

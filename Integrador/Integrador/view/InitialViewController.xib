@@ -12,8 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitialViewController" customModule="Integrador" customModuleProvider="target">
             <connections>
                 <outlet property="aceptTermsSwitch" destination="Cgw-vv-83d" id="0UW-Vl-lT2"/>
-                <outlet property="maxPrice" destination="LfB-a1-s4G" id="9Tz-LE-jY5"/>
-                <outlet property="minPrice" destination="xZp-er-XvQ" id="mar-1H-CSn"/>
+                <outlet property="maxValueTextField" destination="LfB-a1-s4G" id="Ed6-7J-cND"/>
+                <outlet property="minValueTextField" destination="xZp-er-XvQ" id="eEd-cX-ryb"/>
                 <outlet property="numberOfParticipantsTextField" destination="mMO-aG-H5d" id="807-GP-Rgb"/>
                 <outlet property="startButton" destination="BiX-JZ-bWi" id="KcF-7N-zzY"/>
                 <outlet property="termsAndConditionsButton" destination="0Tu-02-d0i" id="ZTX-fi-imd"/>
@@ -26,7 +26,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Bored" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBn-dH-zlb">
-                    <rect key="frame" x="107" y="74" width="200" height="48"/>
+                    <rect key="frame" x="83" y="74" width="200" height="48"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="eeg-XQ-dmR"/>
                         <constraint firstAttribute="height" constant="48" id="mOh-8q-ORz"/>
@@ -36,12 +36,12 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of participants" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mMO-aG-H5d">
-                    <rect key="frame" x="20" y="223" width="374" height="34"/>
+                    <rect key="frame" x="20" y="223" width="326" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiX-JZ-bWi">
-                    <rect key="frame" x="20" y="457" width="374" height="50"/>
+                    <rect key="frame" x="20" y="457" width="326" height="50"/>
                     <color key="backgroundColor" name="boredMediumColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="qQH-0W-Mmb"/>
@@ -54,7 +54,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Tu-02-d0i">
-                    <rect key="frame" x="113" y="527.5" width="188" height="36"/>
+                    <rect key="frame" x="89" y="527.5" width="188" height="36"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="36" id="S1j-AI-eqB"/>
                         <constraint firstAttribute="width" constant="188" id="h6p-NT-SzG"/>
@@ -77,7 +77,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Participants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05Y-g8-ZRh">
-                    <rect key="frame" x="20" y="172" width="374" height="21"/>
+                    <rect key="frame" x="20" y="172" width="326" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="IzA-4o-f5h"/>
                     </constraints>
@@ -91,7 +91,7 @@
                     <color key="onTintColor" name="boredMediumColor"/>
                 </switch>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price Range" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgd-qc-8bC">
-                    <rect key="frame" x="20" y="287" width="374" height="21"/>
+                    <rect key="frame" x="20" y="287" width="326" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="Tvg-5o-Daf"/>
                     </constraints>
@@ -100,15 +100,15 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Min Price $ 0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xZp-er-XvQ">
-                    <rect key="frame" x="20" y="338" width="120" height="34"/>
+                    <rect key="frame" x="20" y="338" width="148" height="34"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="120" id="S8t-az-2Pr"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Max Price $ 0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LfB-a1-s4G">
-                    <rect key="frame" x="170" y="338" width="125" height="34"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Max Price $ 1.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LfB-a1-s4G">
+                    <rect key="frame" x="198" y="338" width="148" height="34"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="SlM-Zg-dxr"/>
                     </constraints>
@@ -135,11 +135,12 @@
                 <constraint firstItem="mMO-aG-H5d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="RnM-pP-00B"/>
                 <constraint firstItem="mMO-aG-H5d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="TDn-KR-EAn"/>
                 <constraint firstItem="LfB-a1-s4G" firstAttribute="height" secondItem="xZp-er-XvQ" secondAttribute="height" id="Vsb-D5-fGt"/>
-                <constraint firstItem="xZp-er-XvQ" firstAttribute="width" secondItem="LfB-a1-s4G" secondAttribute="width" multiplier="0.961749" id="W85-BC-9Xg"/>
+                <constraint firstItem="xZp-er-XvQ" firstAttribute="width" secondItem="LfB-a1-s4G" secondAttribute="width" id="W85-BC-9Xg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mMO-aG-H5d" secondAttribute="trailing" constant="20" id="aMh-s6-QES"/>
                 <constraint firstItem="0Tu-02-d0i" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="ad8-q4-q4M"/>
                 <constraint firstItem="Tgd-qc-8bC" firstAttribute="top" secondItem="mMO-aG-H5d" secondAttribute="bottom" constant="30" id="bF2-Kk-JXX"/>
                 <constraint firstItem="xZp-er-XvQ" firstAttribute="top" secondItem="Tgd-qc-8bC" secondAttribute="bottom" constant="30" id="hDA-ds-FR2"/>
+                <constraint firstItem="LfB-a1-s4G" firstAttribute="trailing" secondItem="mMO-aG-H5d" secondAttribute="trailing" id="iAK-Qg-wdq"/>
                 <constraint firstItem="Tgd-qc-8bC" firstAttribute="leading" secondItem="mMO-aG-H5d" secondAttribute="leading" id="nJh-h6-2UZ"/>
                 <constraint firstItem="0Tu-02-d0i" firstAttribute="leading" secondItem="Cgw-vv-83d" secondAttribute="trailing" constant="20" id="pAl-GQ-L1l"/>
                 <constraint firstItem="LfB-a1-s4G" firstAttribute="leading" secondItem="xZp-er-XvQ" secondAttribute="trailing" constant="30" id="qog-Cv-pPg"/>
