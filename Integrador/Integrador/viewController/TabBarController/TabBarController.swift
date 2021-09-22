@@ -15,4 +15,5 @@ class TabBarController: UITabBarController {
         tabBar.barTintColor = UIColor(named: "boredMediumColor")
         tabBar.unselectedItemTintColor = .darkGray
     }
+    
 }

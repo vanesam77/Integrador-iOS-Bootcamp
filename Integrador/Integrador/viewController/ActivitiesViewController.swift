@@ -28,6 +28,11 @@ class ActivitiesViewController: UIViewController {
         self.activitiesTableView.dataSource = self
         self.activitiesTableView.delegate = self
         self.activitiesTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.activitiesTableView.separatorColor = UIColor(named: "boredAccentColor")
+        navigationController?.navigationBar.backgroundColor = UIColor(named: "boredMediumColor")
+        navigationController?.navigationBar.tintColor = UIColor(named: "boredAccentColor")
+//        navigationController?.tabBarItem.title = title
+//        navigationController!.navigationBar.prefersLargeTitles = true
     }
     
     private func showQuestions(for activity: String){

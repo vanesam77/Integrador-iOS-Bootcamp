@@ -41,6 +41,10 @@ class ResultsViewController: UIViewController {
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.backgroundColor = UIColor(named: "boredMediumColor")
+        navigationController?.navigationBar.tintColor = UIColor(named: "boredAccentColor")
+        navigationController?.tabBarItem.title = title
+        navigationController!.navigationBar.prefersLargeTitles = true
         
         switch viewModel.type {
         case .suggestion:

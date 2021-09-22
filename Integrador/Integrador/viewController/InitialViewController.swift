@@ -6,7 +6,7 @@
 //
 
 import UIKit
-class InitialViewController: UIViewController {
+class InitialViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var numberOfParticipantsTextField: UITextField!
     @IBOutlet weak var minValueTextField: UITextField!
@@ -21,6 +21,12 @@ class InitialViewController: UIViewController {
         super.viewDidLoad()
         aceptTermsSwitch.isOn = false
         startButton.layer.cornerRadius = startButton.bounds.height/8
+        self.numberOfParticipantsTextField.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 
     @IBAction func termsAndConditionsButtonTapped(_ sender: Any) {
@@ -33,7 +39,7 @@ class InitialViewController: UIViewController {
         if let amountText = numberOfParticipantsTextField.text,
            let minValue = minValueTextField.text, let maxValue = maxValueTextField.text,
            let amountNum = Int(amountText), let minValueNum = Double(minValue),
-           let maxValueNum = Double(maxValue), amountNum > 0 && minValueNum >= 0 && maxValueNum <= 1 && minValueNum <= maxValueNum && aceptTermsSwitch.isOn {
+           let maxValueNum = Double(maxValue), amountNum > 0 && minValueNum >= 0 && maxValueNum <= 1 && minValueNum <= maxValueNum && validateSwitchIsOn() {
             self.participant = amountNum
             
             let vc = TabBarController(nibName: "TabBarController", bundle: nil)
@@ -62,9 +68,21 @@ class InitialViewController: UIViewController {
         let navController = UINavigationController(rootViewController: rootViewController)
         navController.tabBarItem.title = title
         navController.tabBarItem.image = image
+        navController.navigationBar.prefersLargeTitles = true
         rootViewController.navigationItem.title = title
         navController.navigationBar.backgroundColor = .systemTeal
         return navController
+    }
     
+    func validateSwitchIsOn() -> Bool{
+        if aceptTermsSwitch.isOn {
+            return true
+        } else{
+            let message = "Please accept the Terms and Conditions to continue"
+            let alert = UIAlertController(title: "Start", message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return false
+        }
     }
 }
