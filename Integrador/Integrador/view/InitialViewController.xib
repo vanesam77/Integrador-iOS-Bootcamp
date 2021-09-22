@@ -26,12 +26,12 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Bored" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBn-dH-zlb">
-                    <rect key="frame" x="140" y="74" width="134" height="48"/>
+                    <rect key="frame" x="107" y="74" width="200" height="48"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="134" id="eeg-XQ-dmR"/>
+                        <constraint firstAttribute="width" constant="200" id="eeg-XQ-dmR"/>
                         <constraint firstAttribute="height" constant="48" id="mOh-8q-ORz"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                     <color key="textColor" name="boredMediumColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -86,7 +86,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Cgw-vv-83d">
-                    <rect key="frame" x="20" y="530" width="51" height="31"/>
+                    <rect key="frame" x="20" y="530" width="75" height="31"/>
                     <color key="tintColor" name="boredMediumColor"/>
                     <color key="onTintColor" name="boredMediumColor"/>
                 </switch>
@@ -99,13 +99,16 @@
                     <color key="textColor" name="boredAccentColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Min Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xZp-er-XvQ">
-                    <rect key="frame" x="20" y="338" width="88" height="34"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Min Price $ 0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xZp-er-XvQ">
+                    <rect key="frame" x="20" y="338" width="120" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="S8t-az-2Pr"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Max Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LfB-a1-s4G">
-                    <rect key="frame" x="138" y="338" width="91.5" height="34"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Max Price $ 0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LfB-a1-s4G">
+                    <rect key="frame" x="170" y="338" width="125" height="34"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="SlM-Zg-dxr"/>
                     </constraints>
@@ -138,7 +141,7 @@
                 <constraint firstItem="Tgd-qc-8bC" firstAttribute="top" secondItem="mMO-aG-H5d" secondAttribute="bottom" constant="30" id="bF2-Kk-JXX"/>
                 <constraint firstItem="xZp-er-XvQ" firstAttribute="top" secondItem="Tgd-qc-8bC" secondAttribute="bottom" constant="30" id="hDA-ds-FR2"/>
                 <constraint firstItem="Tgd-qc-8bC" firstAttribute="leading" secondItem="mMO-aG-H5d" secondAttribute="leading" id="nJh-h6-2UZ"/>
-                <constraint firstItem="0Tu-02-d0i" firstAttribute="leading" secondItem="Cgw-vv-83d" secondAttribute="trailing" constant="44" id="pAl-GQ-L1l"/>
+                <constraint firstItem="0Tu-02-d0i" firstAttribute="leading" secondItem="Cgw-vv-83d" secondAttribute="trailing" constant="20" id="pAl-GQ-L1l"/>
                 <constraint firstItem="LfB-a1-s4G" firstAttribute="leading" secondItem="xZp-er-XvQ" secondAttribute="trailing" constant="30" id="qog-Cv-pPg"/>
                 <constraint firstItem="Cgw-vv-83d" firstAttribute="leading" secondItem="BiX-JZ-bWi" secondAttribute="leading" id="qqM-zP-nmf"/>
                 <constraint firstItem="05Y-g8-ZRh" firstAttribute="top" secondItem="gBn-dH-zlb" secondAttribute="bottom" constant="50" id="qtD-02-Dje"/>
