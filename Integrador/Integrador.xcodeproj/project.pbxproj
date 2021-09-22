@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A84B59A026F62AA8002B3F12 /* TermsAndConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B599E26F62AA8002B3F12 /* TermsAndConditionViewController.swift */; };
+		3ADF140C26FB798300B353E1 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF140726FB798300B353E1 /* ResultsViewController.swift */; };
+		3ADF140D26FB798300B353E1 /* ActivitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF140826FB798300B353E1 /* ActivitiesViewModel.swift */; };
+		3ADF140E26FB798300B353E1 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF140926FB798300B353E1 /* ResultsViewModel.swift */; };
+		3ADF141026FB798300B353E1 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF140B26FB798300B353E1 /* ActivitiesViewController.swift */; };
+		3ADF141326FB7A7900B353E1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF141226FB7A7900B353E1 /* TabBarController.swift */; };
+		3ADF141526FB7AAA00B353E1 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF141426FB7AAA00B353E1 /* InitialViewController.swift */; };
+		3ADF141726FB7B0B00B353E1 /* TermsAndConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF141626FB7B0B00B353E1 /* TermsAndConditionViewController.swift */; };
+		3ADF141A26FB7BDE00B353E1 /* SuggestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ADF141826FB7BDE00B353E1 /* SuggestionViewController.xib */; };
+		3ADF141B26FB7BDE00B353E1 /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ADF141926FB7BDE00B353E1 /* ResultsViewController.xib */; };
 		A84B59A126F62AA8002B3F12 /* TermsAndConditionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84B599F26F62AA8002B3F12 /* TermsAndConditionViewController.xib */; };
-		A84B59A426F654AC002B3F12 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B59A226F654AC002B3F12 /* ActivitiesViewController.swift */; };
 		A84B59A526F654AC002B3F12 /* ActivitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84B59A326F654AC002B3F12 /* ActivitiesViewController.xib */; };
-		A84B59A826F659DB002B3F12 /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B59A626F659DB002B3F12 /* RandomViewController.swift */; };
-		A84B59A926F659DB002B3F12 /* RandomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84B59A726F659DB002B3F12 /* RandomViewController.xib */; };
-		A84B59AC26F65A3A002B3F12 /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B59AA26F65A3A002B3F12 /* SuggestionViewController.swift */; };
-		A84B59AD26F65A3A002B3F12 /* SuggestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84B59AB26F65A3A002B3F12 /* SuggestionViewController.xib */; };
-		A84B59B026F65AE8002B3F12 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B59AF26F65AE8002B3F12 /* TabBarController.swift */; };
 		A84B59B426F668EA002B3F12 /* AlamofireAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B59B326F668EA002B3F12 /* AlamofireAPIClient.swift */; };
 		A84B59B826F67AE9002B3F12 /* SuggestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B59B726F67AE9002B3F12 /* SuggestionService.swift */; };
 		A84B59BA26F67B75002B3F12 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B59B926F67B75002B3F12 /* Suggestion.swift */; };
@@ -23,21 +25,22 @@
 		A8FDD6A826F51A920094301E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FDD6A726F51A920094301E /* SceneDelegate.swift */; };
 		A8FDD6AF26F51A940094301E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8FDD6AE26F51A940094301E /* Assets.xcassets */; };
 		A8FDD6B226F51A940094301E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8FDD6B026F51A940094301E /* LaunchScreen.storyboard */; };
-		A8FDD6C326F51C2A0094301E /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FDD6C126F51C2A0094301E /* InitialViewController.swift */; };
 		A8FDD6C426F51C2A0094301E /* InitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8FDD6C226F51C2A0094301E /* InitialViewController.xib */; };
 		CE4007FC3E6404722BD39BD3 /* Pods_Integrador.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B10B03D311E6220540550BC1 /* Pods_Integrador.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A84B599E26F62AA8002B3F12 /* TermsAndConditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionViewController.swift; sourceTree = "<group>"; };
+		3ADF140726FB798300B353E1 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		3ADF140826FB798300B353E1 /* ActivitiesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesViewModel.swift; sourceTree = "<group>"; };
+		3ADF140926FB798300B353E1 /* ResultsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
+		3ADF140B26FB798300B353E1 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
+		3ADF141226FB7A7900B353E1 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		3ADF141426FB7AAA00B353E1 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		3ADF141626FB7B0B00B353E1 /* TermsAndConditionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsAndConditionViewController.swift; sourceTree = "<group>"; };
+		3ADF141826FB7BDE00B353E1 /* SuggestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuggestionViewController.xib; sourceTree = "<group>"; };
+		3ADF141926FB7BDE00B353E1 /* ResultsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultsViewController.xib; sourceTree = "<group>"; };
 		A84B599F26F62AA8002B3F12 /* TermsAndConditionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsAndConditionViewController.xib; sourceTree = "<group>"; };
-		A84B59A226F654AC002B3F12 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		A84B59A326F654AC002B3F12 /* ActivitiesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesViewController.xib; sourceTree = "<group>"; };
-		A84B59A626F659DB002B3F12 /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
-		A84B59A726F659DB002B3F12 /* RandomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RandomViewController.xib; sourceTree = "<group>"; };
-		A84B59AA26F65A3A002B3F12 /* SuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
-		A84B59AB26F65A3A002B3F12 /* SuggestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionViewController.xib; sourceTree = "<group>"; };
-		A84B59AF26F65AE8002B3F12 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A84B59B326F668EA002B3F12 /* AlamofireAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAPIClient.swift; sourceTree = "<group>"; };
 		A84B59B726F67AE9002B3F12 /* SuggestionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionService.swift; sourceTree = "<group>"; };
 		A84B59B926F67B75002B3F12 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
@@ -47,7 +50,6 @@
 		A8FDD6AE26F51A940094301E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8FDD6B126F51A940094301E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8FDD6B326F51A940094301E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8FDD6C126F51C2A0094301E /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		A8FDD6C226F51C2A0094301E /* InitialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialViewController.xib; sourceTree = "<group>"; };
 		AE40554A14A71AB01A5AA61C /* Pods-Integrador.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Integrador.release.xcconfig"; path = "Target Support Files/Pods-Integrador/Pods-Integrador.release.xcconfig"; sourceTree = "<group>"; };
 		B10B03D311E6220540550BC1 /* Pods_Integrador.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Integrador.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3ADF141126FB7A4600B353E1 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3ADF140926FB798300B353E1 /* ResultsViewModel.swift */,
+				3ADF140826FB798300B353E1 /* ActivitiesViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
 		6D61879B41D8CAE410D092DF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +97,7 @@
 		A84B59AE26F65AC7002B3F12 /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
-				A84B59AF26F65AE8002B3F12 /* TabBarController.swift */,
+				3ADF141226FB7A7900B353E1 /* TabBarController.swift */,
 			);
 			path = TabBarController;
 			sourceTree = "<group>";
@@ -112,6 +123,7 @@
 		A8FDD6A426F51A920094301E /* Integrador */ = {
 			isa = PBXGroup;
 			children = (
+				3ADF141126FB7A4600B353E1 /* viewModel */,
 				A8FDD6B326F51A940094301E /* Info.plist */,
 				A8FDD6B926F51AB70094301E /* main */,
 				A8FDD6BB26F51AF60094301E /* resources */,
@@ -119,7 +131,6 @@
 				A8FDD6BE26F51B6E0094301E /* service */,
 				A8FDD6BA26F51AD70094301E /* model */,
 				A8FDD6BC26F51B120094301E /* view */,
-				A8FDD6BF26F51B950094301E /* viewModel */,
 				A8FDD6C026F51BF50094301E /* viewController */,
 			);
 			path = Integrador;
@@ -154,11 +165,11 @@
 		A8FDD6BC26F51B120094301E /* view */ = {
 			isa = PBXGroup;
 			children = (
+				3ADF141926FB7BDE00B353E1 /* ResultsViewController.xib */,
+				3ADF141826FB7BDE00B353E1 /* SuggestionViewController.xib */,
 				A8FDD6C226F51C2A0094301E /* InitialViewController.xib */,
 				A84B599F26F62AA8002B3F12 /* TermsAndConditionViewController.xib */,
 				A84B59A326F654AC002B3F12 /* ActivitiesViewController.xib */,
-				A84B59A726F659DB002B3F12 /* RandomViewController.xib */,
-				A84B59AB26F65A3A002B3F12 /* SuggestionViewController.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -179,22 +190,14 @@
 			path = service;
 			sourceTree = "<group>";
 		};
-		A8FDD6BF26F51B950094301E /* viewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = viewModel;
-			sourceTree = "<group>";
-		};
 		A8FDD6C026F51BF50094301E /* viewController */ = {
 			isa = PBXGroup;
 			children = (
+				3ADF141626FB7B0B00B353E1 /* TermsAndConditionViewController.swift */,
+				3ADF141426FB7AAA00B353E1 /* InitialViewController.swift */,
+				3ADF140B26FB798300B353E1 /* ActivitiesViewController.swift */,
+				3ADF140726FB798300B353E1 /* ResultsViewController.swift */,
 				A84B59AE26F65AC7002B3F12 /* TabBarController */,
-				A8FDD6C126F51C2A0094301E /* InitialViewController.swift */,
-				A84B599E26F62AA8002B3F12 /* TermsAndConditionViewController.swift */,
-				A84B59A226F654AC002B3F12 /* ActivitiesViewController.swift */,
-				A84B59A626F659DB002B3F12 /* RandomViewController.swift */,
-				A84B59AA26F65A3A002B3F12 /* SuggestionViewController.swift */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -258,13 +261,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ADF141B26FB7BDE00B353E1 /* ResultsViewController.xib in Resources */,
 				A84B59A526F654AC002B3F12 /* ActivitiesViewController.xib in Resources */,
 				A84B59A126F62AA8002B3F12 /* TermsAndConditionViewController.xib in Resources */,
-				A84B59AD26F65A3A002B3F12 /* SuggestionViewController.xib in Resources */,
 				A8FDD6B226F51A940094301E /* LaunchScreen.storyboard in Resources */,
 				A8FDD6AF26F51A940094301E /* Assets.xcassets in Resources */,
+				3ADF141A26FB7BDE00B353E1 /* SuggestionViewController.xib in Resources */,
 				A8FDD6C426F51C2A0094301E /* InitialViewController.xib in Resources */,
-				A84B59A926F659DB002B3F12 /* RandomViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,12 +320,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A84B59AC26F65A3A002B3F12 /* SuggestionViewController.swift in Sources */,
-				A84B59B026F65AE8002B3F12 /* TabBarController.swift in Sources */,
-				A84B59A026F62AA8002B3F12 /* TermsAndConditionViewController.swift in Sources */,
-				A8FDD6C326F51C2A0094301E /* InitialViewController.swift in Sources */,
-				A84B59A426F654AC002B3F12 /* ActivitiesViewController.swift in Sources */,
-				A84B59A826F659DB002B3F12 /* RandomViewController.swift in Sources */,
+				3ADF140D26FB798300B353E1 /* ActivitiesViewModel.swift in Sources */,
+				3ADF141326FB7A7900B353E1 /* TabBarController.swift in Sources */,
+				3ADF141526FB7AAA00B353E1 /* InitialViewController.swift in Sources */,
+				3ADF141026FB798300B353E1 /* ActivitiesViewController.swift in Sources */,
+				3ADF141726FB7B0B00B353E1 /* TermsAndConditionViewController.swift in Sources */,
+				3ADF140E26FB798300B353E1 /* ResultsViewModel.swift in Sources */,
+				3ADF140C26FB798300B353E1 /* ResultsViewController.swift in Sources */,
 				A8FDD6A626F51A920094301E /* AppDelegate.swift in Sources */,
 				A84B59B826F67AE9002B3F12 /* SuggestionService.swift in Sources */,
 				A84B59B426F668EA002B3F12 /* AlamofireAPIClient.swift in Sources */,

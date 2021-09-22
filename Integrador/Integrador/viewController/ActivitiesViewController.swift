@@ -9,8 +9,17 @@ import UIKit
 
 class ActivitiesViewController: UIViewController {
     
-    let activities:[String] = ["education", "recreational", "social", "diy", "charity", "cooking", "relaxation", "music", "busywork"]
-    var activity:String = ""
+    var activity: String = ""
+    var activitiesViewModel: ActivitiesViewModel
+    
+    init(viewModel: ActivitiesViewModel) {
+        self.activitiesViewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     @IBOutlet weak var activitiesTableView: UITableView!
     
@@ -19,45 +28,34 @@ class ActivitiesViewController: UIViewController {
         self.activitiesTableView.dataSource = self
         self.activitiesTableView.delegate = self
         self.activitiesTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        self.activitiesTableView.separatorColor = UIColor(named: "boredAccentColor")
-        navigationController?.navigationBar.backgroundColor = UIColor(named: "boredMediumColor")
-        navigationController?.navigationBar.tintColor = UIColor(named: "boredAccentColor")
     }
     
     private func showQuestions(for activity: String){
-        let suggestionVC = SuggestionViewController(nibName: "SuggestionViewController", bundle: nil)
+        let suggestionVC = ResultsViewController(viewModel: ResultsViewModel(type: .suggestion, activity: activity, participant: activitiesViewModel.participant))
         suggestionVC.title = activity.capitalized
-        suggestionVC.theActivity = self.activity
         navigationController?.pushViewController(suggestionVC, animated: true)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.activitiesTableView.reloadData()
     }
 }
 
 extension ActivitiesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return activities.count
+        return activitiesViewModel.activities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = activities[indexPath.row].capitalized
-        cell.accessoryType = .disclosureIndicator
-        cell.backgroundColor = UIColor(named: "boredLightColor")
-        cell.textLabel?.textColor = UIColor(named: "boredAccentColor")
-        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 25)
+        cell.textLabel?.text = activitiesViewModel.activities[indexPath.row].capitalized
         return cell
     }
 }
 
 extension ActivitiesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.activity = activities[indexPath.row]
+        self.activity = activitiesViewModel.activities[indexPath.row]
         showQuestions(for: self.activity)
+        activitiesTableView.deselectRow(at: indexPath, animated: true)
     }
 }
+
 
 
