@@ -12,6 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitialViewController" customModule="Integrador" customModuleProvider="target">
             <connections>
                 <outlet property="aceptTermsSwitch" destination="Cgw-vv-83d" id="0UW-Vl-lT2"/>
+                <outlet property="maxPrice" destination="LfB-a1-s4G" id="9Tz-LE-jY5"/>
+                <outlet property="minPrice" destination="xZp-er-XvQ" id="mar-1H-CSn"/>
                 <outlet property="numberOfParticipantsTextField" destination="mMO-aG-H5d" id="807-GP-Rgb"/>
                 <outlet property="startButton" destination="BiX-JZ-bWi" id="KcF-7N-zzY"/>
                 <outlet property="termsAndConditionsButton" destination="0Tu-02-d0i" id="ZTX-fi-imd"/>
@@ -34,12 +36,12 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of participants" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mMO-aG-H5d">
-                    <rect key="frame" x="20" y="222.5" width="374" height="34"/>
+                    <rect key="frame" x="20" y="223" width="374" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiX-JZ-bWi">
-                    <rect key="frame" x="20" y="286.5" width="374" height="50"/>
+                    <rect key="frame" x="20" y="457" width="374" height="50"/>
                     <color key="backgroundColor" name="boredMediumColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="qQH-0W-Mmb"/>
@@ -52,7 +54,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Tu-02-d0i">
-                    <rect key="frame" x="113" y="357" width="188" height="36"/>
+                    <rect key="frame" x="113" y="527.5" width="188" height="36"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="36" id="S1j-AI-eqB"/>
                         <constraint firstAttribute="width" constant="188" id="h6p-NT-SzG"/>
@@ -62,7 +64,7 @@
                         <attributedString key="attributedTitle">
                             <fragment content="Terms and conditions">
                                 <attributes>
-                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="NSColor" red="0.040992252530000002" green="0.0" blue="0.18825066090000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <font key="NSFont" metaFont="system" size="20"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                     <integer key="NSUnderline" value="1"/>
@@ -75,16 +77,41 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Participants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05Y-g8-ZRh">
-                    <rect key="frame" x="20" y="172" width="99" height="20.5"/>
+                    <rect key="frame" x="20" y="172" width="374" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="IzA-4o-f5h"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <color key="textColor" name="boredAccentColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Cgw-vv-83d">
-                    <rect key="frame" x="20" y="359.5" width="51" height="31"/>
+                    <rect key="frame" x="20" y="530" width="51" height="31"/>
                     <color key="tintColor" name="boredMediumColor"/>
                     <color key="onTintColor" name="boredMediumColor"/>
                 </switch>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price Range" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgd-qc-8bC">
+                    <rect key="frame" x="20" y="287" width="374" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Tvg-5o-Daf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" name="boredAccentColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Min Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xZp-er-XvQ">
+                    <rect key="frame" x="20" y="338" width="88" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Max Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LfB-a1-s4G">
+                    <rect key="frame" x="138" y="338" width="91.5" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="SlM-Zg-dxr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                </textField>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="boredLightColor"/>
@@ -93,19 +120,30 @@
                 <constraint firstItem="BiX-JZ-bWi" firstAttribute="trailing" secondItem="mMO-aG-H5d" secondAttribute="trailing" id="2eq-94-dPq"/>
                 <constraint firstItem="05Y-g8-ZRh" firstAttribute="leading" secondItem="mMO-aG-H5d" secondAttribute="leading" id="42I-Tf-TRr"/>
                 <constraint firstItem="BiX-JZ-bWi" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="6os-Zf-7Rd"/>
+                <constraint firstItem="Tgd-qc-8bC" firstAttribute="trailing" secondItem="mMO-aG-H5d" secondAttribute="trailing" id="9O9-RZ-HZZ"/>
+                <constraint firstItem="xZp-er-XvQ" firstAttribute="centerY" secondItem="LfB-a1-s4G" secondAttribute="centerY" id="Cx8-Rn-JI7"/>
                 <constraint firstItem="gBn-dH-zlb" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="DOv-GC-PMn"/>
                 <constraint firstItem="mMO-aG-H5d" firstAttribute="top" secondItem="05Y-g8-ZRh" secondAttribute="bottom" constant="30" id="GLH-gX-1Bh"/>
                 <constraint firstItem="BiX-JZ-bWi" firstAttribute="leading" secondItem="mMO-aG-H5d" secondAttribute="leading" id="HoK-tz-c3H"/>
                 <constraint firstItem="gBn-dH-zlb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="I32-PV-jZK"/>
+                <constraint firstItem="05Y-g8-ZRh" firstAttribute="trailing" secondItem="mMO-aG-H5d" secondAttribute="trailing" id="MwH-zu-cGE"/>
+                <constraint firstItem="BiX-JZ-bWi" firstAttribute="top" secondItem="xZp-er-XvQ" secondAttribute="bottom" constant="85" id="Oam-Mm-KLX"/>
+                <constraint firstItem="xZp-er-XvQ" firstAttribute="leading" secondItem="mMO-aG-H5d" secondAttribute="leading" id="Puo-2L-Cv5"/>
                 <constraint firstItem="mMO-aG-H5d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="RnM-pP-00B"/>
                 <constraint firstItem="mMO-aG-H5d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="TDn-KR-EAn"/>
+                <constraint firstItem="LfB-a1-s4G" firstAttribute="height" secondItem="xZp-er-XvQ" secondAttribute="height" id="Vsb-D5-fGt"/>
+                <constraint firstItem="xZp-er-XvQ" firstAttribute="width" secondItem="LfB-a1-s4G" secondAttribute="width" multiplier="0.961749" id="W85-BC-9Xg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mMO-aG-H5d" secondAttribute="trailing" constant="20" id="aMh-s6-QES"/>
                 <constraint firstItem="0Tu-02-d0i" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="ad8-q4-q4M"/>
+                <constraint firstItem="Tgd-qc-8bC" firstAttribute="top" secondItem="mMO-aG-H5d" secondAttribute="bottom" constant="30" id="bF2-Kk-JXX"/>
+                <constraint firstItem="xZp-er-XvQ" firstAttribute="top" secondItem="Tgd-qc-8bC" secondAttribute="bottom" constant="30" id="hDA-ds-FR2"/>
+                <constraint firstItem="Tgd-qc-8bC" firstAttribute="leading" secondItem="mMO-aG-H5d" secondAttribute="leading" id="nJh-h6-2UZ"/>
                 <constraint firstItem="0Tu-02-d0i" firstAttribute="leading" secondItem="Cgw-vv-83d" secondAttribute="trailing" constant="44" id="pAl-GQ-L1l"/>
+                <constraint firstItem="LfB-a1-s4G" firstAttribute="leading" secondItem="xZp-er-XvQ" secondAttribute="trailing" constant="30" id="qog-Cv-pPg"/>
                 <constraint firstItem="Cgw-vv-83d" firstAttribute="leading" secondItem="BiX-JZ-bWi" secondAttribute="leading" id="qqM-zP-nmf"/>
                 <constraint firstItem="05Y-g8-ZRh" firstAttribute="top" secondItem="gBn-dH-zlb" secondAttribute="bottom" constant="50" id="qtD-02-Dje"/>
                 <constraint firstItem="0Tu-02-d0i" firstAttribute="top" secondItem="BiX-JZ-bWi" secondAttribute="bottom" constant="20.5" id="rin-OE-R9Z"/>
-                <constraint firstItem="BiX-JZ-bWi" firstAttribute="top" secondItem="mMO-aG-H5d" secondAttribute="bottom" constant="30" id="sLb-0W-0TM"/>
+                <constraint firstItem="BiX-JZ-bWi" firstAttribute="top" secondItem="mMO-aG-H5d" secondAttribute="bottom" constant="200" id="sLb-0W-0TM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mMO-aG-H5d" secondAttribute="trailing" constant="20" id="ykF-Hz-QnK"/>
             </constraints>
             <point key="canvasLocation" x="-23.188405797101453" y="87.723214285714278"/>

@@ -13,7 +13,8 @@ class InitialViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var termsAndConditionsButton: UIButton!
     @IBOutlet weak var aceptTermsSwitch: UISwitch!
-    
+    @IBOutlet weak var minPrice: UITextField!
+    @IBOutlet weak var maxPrice: UITextField!
     private var participant: Int?
     
     override func viewDidLoad() {
@@ -45,12 +46,16 @@ class InitialViewController: UIViewController, UITextFieldDelegate {
     }
     
     func validateInputText() -> Bool{
-        if let amountText = numberOfParticipantsTextField.text, let amountNum = Int(amountText), amountNum > 0 && numberOfParticipantsTextField.hasText {
+        if let amountText = numberOfParticipantsTextField.text, let amountNum = Int(amountText),
+           let amountMinText = minPrice.text, let amountMinPrice = Double(amountMinText),
+           let amountMaxText = maxPrice.text, let amountMaxPrice = Double(amountMaxText),
+           numberOfParticipantsTextField.hasText && minPrice.hasText && maxPrice.hasText &&
+            amountNum > 0 && amountMinPrice >= 0 , amountMaxPrice <= 1 && amountMinPrice < amountMaxPrice {
             self.participant = amountNum
             startButton.backgroundColor = UIColor(named: "boredMediumColor")
             return true
         } else {
-            let message = "Please enter the number of participants"
+            let message = "Please enter the number of participants and range of price between 0 and 1"
             let alert = UIAlertController(title: "Start", message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
